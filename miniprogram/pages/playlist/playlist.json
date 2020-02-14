@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "cc-playlist": "/components/playlist/playlist"
+  }
+}

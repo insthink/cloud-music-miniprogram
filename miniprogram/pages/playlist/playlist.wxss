@@ -1,0 +1,16 @@
+/* pages/playlist/playlist.wxss */
+.playlist-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
+
+swiper {
+  padding: 15rpx;
+}
+
+swiper image {
+  border-radius: 6rpx;
+}
