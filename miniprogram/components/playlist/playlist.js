@@ -30,21 +30,21 @@ Component({
   methods: {
     _transformNum(n, precision) {
       // 省略小数部分
-      const nStr = n.toString().split('.')[0];
+      const nStr = n.toString().split('.')[0]
       // 万级以下，直接返回
       if (nStr.length <= 5) {
-        return n;
+        return n
       }
       // 万到千万
       if (nStr.length > 5 && nStr.length <= 8) {
-        const integer = parseInt(parseInt(nStr) / 10000);
-        const decimal = parseInt(parseInt(nStr) % 10000);
+        const integer = parseInt(parseInt(nStr) / 10000)
+        const decimal = parseInt(parseInt(nStr) % 10000)
         return `${integer.toString()}.${decimal.toString().substr(0, precision)}万`
       }
       // 亿以上
       if (nStr.length > 8) {
-        const integer = parseInt(parseInt(nStr) / 100000000);
-        const decimal = parseInt(parseInt(nStr) % 100000000);
+        const integer = parseInt(parseInt(nStr) / 100000000)
+        const decimal = parseInt(parseInt(nStr) % 100000000)
         return `${integer.toString()}.${decimal.toString().substr(0, precision)}亿`
       }
     }
