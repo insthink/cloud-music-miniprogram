@@ -1,0 +1,16 @@
+<view class="musiclist-wrapper">
+  <block wx:for="{{musiclist}}" wx:key="id">
+    <view class="music-item">
+      <view class="music-idx">{{index + 1}}</view>
+      <view class="music-info">
+        <view class="music-name">
+          {{item.name}}
+          <text class="music-alia">{{item.alia.length <= 0 ? "" : item.alia[0]}}</text>
+        </view>
+        <view class="music-src">
+            {{item.ar.length <= 0 ? "" : item.ar[0].name}} -《{{item.al.name}}》
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

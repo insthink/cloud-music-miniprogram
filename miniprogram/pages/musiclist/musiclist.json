@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "cc-musiclist": "/components/musiclist/musiclist"
+  }
+}

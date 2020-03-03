@@ -1,7 +1,9 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
-
 const TcbRouter = require('tcb-router')
+const rq = require('request-promise')
+
+const BASE_URL = 'http://musicapi.xiecheng.live'
 
 cloud.init()
 
@@ -18,6 +20,13 @@ exports.main = async (event, context) => {
       .then(res => {
         return res
       })  
+  })
+
+  app.router('musiclist', async (cxt, next) => {
+    const URL = `${BASE_URL}/playlist/detail?id=${event.playlistId}`
+    cxt.body = await rq(URL).then(res => {
+      return JSON.parse(res)
+    })
   })
   
   return app.serve()

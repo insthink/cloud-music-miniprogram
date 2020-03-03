@@ -1,0 +1,9 @@
+<view class="cover-bg" style="background: url({{listInfo.coverImgUrl}}) no-repeat top">
+</view>
+<view class="cover-mask"></view>
+<view class="info">
+  <image class="info-img" src="{{listInfo.coverImgUrl}}"></image>
+  <view class="info-text">{{listInfo.name}}</view>
+</view>
+
+<cc-musiclist musiclist="{{tracks}}"/>

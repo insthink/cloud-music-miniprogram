@@ -61,12 +61,21 @@
 					"id": -1,
 					"name": "pages/demo/demo",
 					"pathName": "pages/demo/demo",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/playlist/playlist",
 					"pathName": "pages/playlist/playlist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/musiclist/musiclist",
+					"pathName": "pages/musiclist/musiclist",
+					"query": "playlistId=3205374001",
 					"scene": null
 				}
 			]

@@ -1,0 +1,40 @@
+/* components/musiclist/musiclist.wxss */
+
+.musiclist-wrapper {
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.music-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 20rpx;
+}
+
+.music-idx {
+  width: 80rpx;
+  color: #888;
+}
+
+.music-info {
+  flex: 1;
+  width: 0;
+}
+.music-name {
+  font-size: 32rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.music-alia {
+  font-size: 28rpx;
+  color: #888;
+}
+
+.music-src {
+  font-size: 28rpx;
+  color: #888;
+}

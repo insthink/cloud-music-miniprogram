@@ -9,6 +9,9 @@ Component({
     }
   },
 
+  /**
+  * 观察者：监听变量 
+  */
   observers: {
     ["playlistItem.playCount"](cnt) {
       this.setData({
@@ -28,6 +31,16 @@ Component({
    * 组件的方法列表
    */
   methods: {
+
+    // 路由跳转到音乐列表
+    goToMusiclist() {
+      wx.navigateTo({
+        url: `../../pages/musiclist/musiclist?playlistId=${this.properties.playlistItem.id}`,
+      })
+    },
+
+
+    // 数值格式转换
     _transformNum(n, precision) {
       // 省略小数部分
       const nStr = n.toString().split('.')[0]
